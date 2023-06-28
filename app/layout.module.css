@@ -1,0 +1,61 @@
+
+.BeerRatingApp {
+  background-color: var(--color-background);
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 100%;
+}
+.Main {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.Footer {
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 4px solid var(--color-one);
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+.Footer a {
+  font-weight: normal;
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.UpperHeader {
+  height: 64px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding-right: 1rem;
+}
+.MainHeader {
+  height: 8rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 4px solid var(--color-one);
+  border-bottom: 4px solid var(--color-one);
+}
+.MainHeader h1,
+.MainHeader h1 a {
+  font-size: 4rem;
+  font-weight: normal;
+  color: var(--color-one);
+  letter-spacing: 3.7px;
+  font-family: Anton;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+}
+.MainHeader h1 a:hover {
+  text-decoration: underline;
+}

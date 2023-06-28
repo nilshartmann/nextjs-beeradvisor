@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "shop-backend": "cd shop-backend && pnpm install && pnpm start",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

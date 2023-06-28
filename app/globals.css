@@ -1,0 +1,30 @@
+:root {
+  --color-one: #e5ab47;
+  --color-one-rgb: 229, 171, 71;
+  --color-text: #573d1c;
+  --color-background: #fffdf9;
+  --color-background-rgb: 255, 253, 249;
+  --font-text: AnonymousPro-Bold;
+}
+body,
+html {
+  font-family: Anonymous Pro;
+  color: var(--color-text);
+  background-color: #f2f2f2;
+  height: 100%;
+}
+body {
+  overflow-y: scroll;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  cursor: default;
+}
+*:focus {
+  outline: none;
+}
+#app {
+  min-height: 100%;
+}
