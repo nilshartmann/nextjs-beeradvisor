@@ -1,8 +1,8 @@
 import prisma from "@/app/lib/prisma";
 import styles from "./page.module.css";
 import React, { Suspense } from "react";
-import Rating from "@/app/beer/[beerId]/Rating";
-import RatingForm from "@/app/beer/[beerId]/AddRatingForm";
+import Rating from "@/app/beers/[beerId]/Rating";
+import RatingForm from "@/app/beers/[beerId]/AddRatingForm";
 import { Shop, ShopApiResponse } from "@/app/types";
 import Link from "next/link";
 import AppLink from "@/app/components/AppLink";

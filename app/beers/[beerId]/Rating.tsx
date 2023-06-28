@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./page.module.css";
-import { SingleBeer } from "@/app/beer/[beerId]/page";
+import { SingleBeer } from "@/app/beers/[beerId]/page";
 import Stars from "@/app/components/Stars";
 
 type RatingProps = {

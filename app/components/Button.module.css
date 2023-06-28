@@ -1,0 +1,32 @@
+
+.Button {
+
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  background-color: var(--color-background);
+  color: var(--color-main);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: var(--color-text) 0 0 0 2px inset;
+
+  cursor: pointer;
+
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+}
+
+.Button:hover {
+  background-color: var(--color-text);
+  box-shadow: var(--color-text) 0 0 0 2px inset;
+  color: var(--color-background);
+}
+
+.Button:disabled,
+.Button:hover:disabled {
+  color: #D0B0B0FF;
+  background-color: var(--color-background);
+  box-shadow: #D0B0B0FF 0 0 0 2px inset;
+  cursor: default;
+}

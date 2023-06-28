@@ -96,7 +96,7 @@ async function BeerInStock({ beerId }: BeerInStockProps) {
 
   return (
     <div className={styles.Beer}>
-      <Link href={`/beer/${beerId}`}>{beer.name}</Link>
+      <Link href={`/beers/${beerId}`}>{beer.name}</Link>
     </div>
   );
 }

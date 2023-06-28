@@ -1,0 +1,17 @@
+
+.ButtonBar {
+  display: flex;
+  justify-content: end;
+  margin-top: 1.5rem;
+}
+
+.ButtonBar button {
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.3rem 0.8rem;
+}
+
+.ButtonBar button:last-child {
+  margin-right: 0;
+}
