@@ -28,3 +28,10 @@ export type ShopApiResponse<PAYLOAD> = {
   data: PAYLOAD;
   meta: ShopApiResponseMetaData;
 };
+
+export type AddRatingRequestBody = {
+  beerId: string;
+  username: string;
+  stars: number;
+  comment: string;
+};

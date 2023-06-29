@@ -1,7 +1,7 @@
 "use client";
 import useBeerAdvisorSearchParams, {
   OrderBy,
-} from "@/app/useBeerAdvisorSearchParams";
+} from "@/app/components/useBeerAdvisorSearchParams";
 import Button from "@/app/components/Button";
 
 type OrderByButtonProps = {
