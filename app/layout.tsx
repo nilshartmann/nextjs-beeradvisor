@@ -37,4 +37,4 @@ export default function RootLayout({
     </html>
   );
 }
-const GITHUB_REPO = "https://github.com/nilshartmann/XXX-TODO-XXX";
+const GITHUB_REPO = "https://github.com/nilshartmann/nextjs-beeradvisor";

@@ -1,0 +1,22 @@
+.Welcome {
+  margin-top: 3rem;
+text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Welcome p {
+  margin-bottom: 2rem;
+}
+
+.Welcome a {
+
+  color: var(--color-text);
+  border: 2px solid var(--color-text);
+  padding:0.5rem 0.5rem;
+  border-radius: 5px;
+}
+
+.Welcome a:hover {
+  background-color: var(--color-text);
+  color: var(--color-background);
+}
