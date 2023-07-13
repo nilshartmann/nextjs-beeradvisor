@@ -1,5 +1,7 @@
 # "BeerAdvisor" Next.js Sample application
 
+This repository contains an example fullstack React application with Next.js 13.4 App Router. It uses React Server components and both a database and an external REST service as datasources.
+
 ![Screenshot BeerAdvisor](./screenshot-beeradvisor.png)
 
 # Start:
