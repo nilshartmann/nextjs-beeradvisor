@@ -1,26 +1,29 @@
 # "BeerAdvisor" Next.js Sample application
 
+![Screenshot BeerAdvisor](./screenshot-beeradvisor.png)
+
 # Start:
 
-Run the following commands all from the root directory:
+Run the following commands from the root directory:
 
-### 1. Database
-* use docker-compose to start the database
-  * Note: port `1360` must be available
+### 1. Start the database
+* use docker-compose to start the database. (Note that port `1360` must be available)
 ```bash
 docker-compose
 ```
   * if you want to connect to the running database either use docker or connect with your fav db tool
     (for connection data see docker-compose file here)
-* on first run: setup the database content
+### 2. Populate the database
+
+* on first run only: setup the database content
 ```bash
 pnpm db:reset
 ```
 
-### 2. Shop API
-* Start "Shop API" by running `pnpm shop-backend`
+### 3. Shop API
+* Start "Shop API" service by running `pnpm shop-backend`
 
-### 3. Start nextjs application
+### 3. Start Next.js application
 
 * Install dependencies:
 ```bash 
@@ -32,3 +35,7 @@ pnpm install
 ```bash 
 pnpm dev
 ```
+
+### Feedback
+
+If you have questions, comments or other feedback, feel free to raise an issue in this repository. You can also contact me on [Twitter](twitter.com/nilshartmann), [Mastodon](https://norden.social/@nilshartmann) or [my homepage](https://nilshartmann.net).
