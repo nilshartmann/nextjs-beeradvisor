@@ -9,7 +9,7 @@ Run the following commands from the root directory:
 ### 1. Start the database
 * use docker-compose to start the database. (Note that port `1360` must be available)
 ```bash
-docker-compose
+docker-compose up -d
 ```
   * if you want to connect to the running database either use docker or connect with your fav db tool
     (for connection data see docker-compose file here)
