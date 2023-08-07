@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "db:start": "docker-compose up -d",
     "db:generate-client": "prisma generate",
     "db:reset": "prisma db push --force-reset && prisma db seed"
   },
