@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="beer_db@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
       <IntrospectionStateNumber>730</IntrospectionStateNumber>
@@ -4318,9 +4318,9 @@ true posixrules
       <ObjectId>16399</ObjectId>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>cascade</OnUpdate>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
       <StateNumber>729</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefKeyColNames>id</RefKeyColNames>
       <RefTableId>16385</RefTableId>
       <RefTableName>Beer</RefTableName>
       <RefTableKind>table</RefTableKind>
