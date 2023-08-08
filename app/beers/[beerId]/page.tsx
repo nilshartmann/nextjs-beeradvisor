@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import prisma from "@/app/lib/prisma";
 import styles from "./page.module.css";
 import React, { Suspense } from "react";
@@ -7,6 +8,7 @@ import { Shop, ShopApiResponse } from "@/app/types";
 import Link from "next/link";
 import AppLink from "@/app/components/AppLink";
 import LoadingIndicator from "@/app/components/LoadingIndicator";
+import RatingList from "@/app/beers/[beerId]/RatingList";
 
 type ShopsReponse = ShopApiResponse<Shop[]>;
 
@@ -23,7 +25,7 @@ async function loadBeer(beerId: string) {
 }
 
 async function loadShops(beerId: string) {
-  const url = `http://localhost:7000/shops?beerId=${beerId}&slow=2400`;
+  const url = `http://localhost:7000/shops?beerId=${beerId}`;
   console.log("Fetching from ", url);
   const response = await fetch(url);
   if (!response.ok) {
@@ -38,6 +40,7 @@ async function loadShops(beerId: string) {
 export type SingleBeer = NonNullable<Awaited<ReturnType<typeof loadBeer>>>;
 
 type BeerPageProps = { params: { beerId: string } };
+
 export default async function BeerPage({ params }: BeerPageProps) {
   const shopsPromise = loadShops(params.beerId);
   const beer = await loadBeer(params.beerId);
@@ -69,12 +72,8 @@ export default async function BeerPage({ params }: BeerPageProps) {
             >
               <Shops shopsResponse={shopsPromise} />
             </Suspense>
-            <div className={styles.Ratings}>
-              <h1>What customers say:</h1>
-              {beer.ratings.map((rating) => (
-                <Rating key={rating.id} rating={rating} />
-              ))}
-            </div>
+
+            <RatingList beer={beer} />
 
             <h1>
               ...and what do <em>you</em> think?
