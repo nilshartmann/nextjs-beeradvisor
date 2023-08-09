@@ -79,7 +79,7 @@ async function loadBeer(beerId: string) {
     },
   });
 
-  await sleep();
+  // await sleep();
   return beer;
 }
 
