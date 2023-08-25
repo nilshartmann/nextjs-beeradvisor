@@ -156,6 +156,27 @@ async function main() {
     },
   });
 
+  await prisma.beer.upsert({
+    where: { id: "B7" },
+    update: {},
+    create: {
+      id: "B7",
+      name: "Pinkus",
+      price: "3,90 EUR",
+      ratings: {
+        create: [
+          {
+            username: "Nils",
+            id: "R100",
+            comment: "Tasty!!!",
+            stars: 4,
+          },
+          { username: "Alessa Bradley", id: "R101", comment: "great!", stars: 5 },
+        ],
+      },
+    },
+  });
+
   const allUsers = await prisma.beer.findMany({
     include: { ratings: true },
   });

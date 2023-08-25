@@ -17,7 +17,7 @@ const shops: Shop[] = [
     city: "Wieze",
     country: "Belgium",
     openinghours: "08:30-19:00",
-    beers: ["B2", "B3", "B4"],
+    beers: ["B2", "B3", "B4", "B7"],
   },
   {
     id: "S2",
@@ -27,7 +27,7 @@ const shops: Shop[] = [
     city: "Aartrijke",
     country: "Belgium",
     openinghours: "09:00-21:00",
-    beers: ["B1", "B5", "B6"],
+    beers: ["B1", "B5", "B6", "B7"],
   },
   {
     id: "S3",
@@ -47,7 +47,7 @@ const shops: Shop[] = [
     city: "Tranås",
     country: "Sweden",
     openinghours: "08:30-20:45",
-    beers: ["B1", "B3"],
+    beers: ["B1", "B3", "B7"],
   },
   {
     id: "S5",
@@ -67,7 +67,7 @@ const shops: Shop[] = [
     city: "Lidköping",
     country: "Sweden",
     openinghours: "09:30-19:30",
-    beers: ["B2", "B3", "B4"],
+    beers: ["B2", "B3", "B4", "B7"],
   },
   {
     id: "S7",
