@@ -22,7 +22,7 @@ export default function RootLayout({
           <header className={styles.Header}>
             <div className={styles.MainHeader}>
               <h1>
-                <AppLink href={"/"}>Beer Advisor</AppLink>
+                <AppLink href={"/beers"}>Beer Advisor</AppLink>
               </h1>
             </div>
           </header>
