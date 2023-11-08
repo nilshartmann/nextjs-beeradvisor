@@ -1,8 +1,11 @@
 "use client";
-import { useState, MouseEvent } from "react";
+import { useState } from "react";
 import styles from "./Form.module.css";
-import type { AddRatingRequestBody } from "@/app/types";
-import { useRouter } from "next/navigation";
+import {
+  saveNewRating,
+  saveNewRatingPrev,
+} from "@/app/beers/[beerId]/beer-actions";
+import { useFormState } from "react-dom";
 
 type RatingFormProps = {
   beerName: string;
@@ -14,49 +17,29 @@ export default function RatingForm({ beerName, beerId }: RatingFormProps) {
   const [comment, setComment] = useState("");
   const [stars, setStars] = useState("");
 
-  const router = useRouter();
-
   const buttonEnabled = !!username && !!stars && !!comment;
-
   const error = "";
 
-  const onLeaveRatingClick = async (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
+  async function runSave(formData: FormData) {
+    const r = await saveNewRating(formData);
 
-    const body: AddRatingRequestBody = {
-      beerId,
-      username,
-      comment,
-      stars: parseInt(stars),
-    };
-
-    const response = await fetch(`/api/beers/${beerId}/rating`, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(body),
-    });
-
-    console.log("RESPONSE STATUS", response.status);
-
-    const r = await response.json();
-
-    console.log("R body", r);
-
-    setUsername("");
-    setComment("");
-    setStars("");
-    router.refresh();
-    console.log("REFRESH DONE");
-  };
+    if (r.status === "created") {
+      setUsername("");
+      setComment("");
+      setStars("");
+    }
+  }
 
   return (
     <div className={styles.Form}>
-      <form>
+      <form action={runSave}>
         <fieldset>
           <div>
             <label>Your name:</label>{" "}
+            <input type={"hidden"} name={"beerId"} value={beerId} />
             <input
               type="text"
+              name={"username"}
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -65,6 +48,7 @@ export default function RatingForm({ beerName, beerId }: RatingFormProps) {
             <label>Your rating (1-5):</label>{" "}
             <input
               type="number"
+              name={"stars"}
               min="1"
               max="5"
               value={stars}
@@ -75,12 +59,13 @@ export default function RatingForm({ beerName, beerId }: RatingFormProps) {
             <label>Your comment:</label>{" "}
             <input
               type="text"
+              name={"comment"}
               value={comment}
               onChange={(e) => setComment(e.target.value)}
             />
           </div>
           <div>
-            <button disabled={!buttonEnabled} onClick={onLeaveRatingClick}>
+            <button type="submit" disabled={!buttonEnabled}>
               Leave rating for {beerName}
             </button>
           </div>
